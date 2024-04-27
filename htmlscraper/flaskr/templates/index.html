@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Engine</title>
+    <!-- Inside templates/index.html -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Search Engine</h1>
+        <h3>Main focus: Natural language processing, Machine Learning and Robots</h3>
+        <p>Please enter your query in the format to get more focused results: "top x documents in [topic]"</p>
+        <form action="/search" method="POST">
+            <input type="text" name="query" placeholder="Enter your search query here...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>
