@@ -80,7 +80,8 @@ def query_process():
         # Initialize results_with_titles once for each unique document
         results_with_titles = [(idx, url_to_title.get(url, "No title available"), url) for idx, url in enumerate(unique_urls)]
 
-        #Increase the value of sparse 
+        #Increase the value of sparse  
+
         norm_query = sparse_norm(query_vector) + 1e-10
         norm_documents = np.linalg.norm(document_vectors, axis=0) + 1e-10
         cosine_similarities = (query_vector.dot(document_vectors) / (norm_query * norm_documents)).flatten().tolist()
