@@ -39,6 +39,8 @@ class ArticleSpider(scrapy.Spider):
         elif 'therobotreport.com' in domain:
             print("Calling robotreport function")
             return self.robotreport(response)
+        # code unable to pass through scraper and produces no result
+        # to be improved in the future
         # # Extract article URLs from the current page and pass them to the parsing function
         #     article_links = response.css('article h2 a::attr(href)').getall()
         #     if self.max_page > len(article_links):
