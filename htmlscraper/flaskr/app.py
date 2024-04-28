@@ -51,18 +51,18 @@ def query_process():
         top_x = int(match.group(2)) if match.group(2) else 10  # Default to 10 if not specified
         topic = match.group(3)
 
-
+        # preprocess query from user
         new_query = re.sub(r'[^a-zA-Z\s]', '', topic).lower()
         new_query_li = new_query.split()
         query_cleaned = ' '.join([word for word in new_query_li if word not in stop_words])
-
+        #applying previous Vectorizer Model to new query 
         query_vector = transformer_vector.transform([query_cleaned])
         print("Query vector shape:", query_vector.shape)
-
+        # Cheeck if query appears within URLs to be evaluated
         if query_vector.shape[1] == 0:
             print("Query vector is empty after transformation.")
             return "Query vector is empty after transformation."
-
+        # Form document_vectors matrix to build tf-idf values
         num_documents = len(unique_urls)
         num_terms = len(invert_ind)
         document_vectors = np.zeros((num_terms, num_documents))
@@ -70,6 +70,7 @@ def query_process():
         # Mapping scores and titles to the URLs
         results_with_titles = []
 
+        #Match the tf-idf values to the document vector corresponding to the term and the URL is belongs to
         for term_idx, term in enumerate(invert_ind.keys()):
             for url, tfidf_score in invert_ind[term]:
                 doc_idx = url_to_index.get(url, -1)
