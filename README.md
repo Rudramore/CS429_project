@@ -211,25 +211,28 @@ Given that the search focuses mainly on natural language processing papers and a
 
 ### Input 1:
 
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image1.png?raw=true "Input 1")
 
 ### Output 1:
 
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image2.png?raw=true "Input 1")
 
 Extends further but more links and scores 
 Additional home button to restart the search for a specific topic
 
 ### Input 2:
-
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image3.png?raw=true "Input 1")
 
 ### Output 2:
 
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image5.png?raw=true "Input 1")
 
-
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image6.png?raw=true "Input 1")
 Default value of 10 documents so that the user can increase more later
 
 ### Input 3:
 
-
+![Input 1](https://github.com/Rudramore/CS429_project/blob/main/image4.png?raw=true "Input 1")
 
 Basic use of topic without adding top documents generally bringing out highest grossing articles matching the topic but can be more specific although focused more on the research side 
 
