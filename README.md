@@ -34,7 +34,7 @@ The search engine should meet the following functional requirements:
 
 The integration of the crawler, indexer, and query processor components is crucial for the overall functionality of the search engine. The web crawler will retrieve web documents, which will be processed and indexed by the indexer. The query processor will then utilize the constructed index to retrieve and rank relevant results based on user queries.
 
-##Architecture:
+## Architecture:
 
 The search engine's software architecture consists of the following main components:
 
@@ -77,7 +77,7 @@ Based on the implementation of the Articlespider class, bThe provided code demon
 - It's important to note that as websites evolve and change their HTML structures, the selectors and parsing logic may need to be updated to ensure the crawler continues to work correctly. Robust error handling and regular maintenance are essential for web crawlers to adapt to changes in the target websites.
 - The internal workings of each component involve various techniques and algorithms specific to their respective domains. For example, the web crawler may utilize techniques for URL extraction, politeness policies, and parallelization. The indexer may employ text preprocessing, feature extraction, and indexing algorithms. The query processor may involve query parsing, tokenization, and ranking algorithms.
 
-##Operation:
+## Operation:
 
 To set up and operate the search engine, follow these steps:
 1.	Install the required software dependencies listed in the requirements.txt file using a package manager like pip.
@@ -209,24 +209,25 @@ The test cases covered a wide range of scenarios, including but not limited to:
 
 Given that the search focuses mainly on natural language processing papers and articles, machine learning and robotics articles, the inputs are given as follows
 
-###Input 1:
+### Input 1:
 
 
-###Output 1:
+### Output 1:
 
 
 Extends further but more links and scores 
 Additional home button to restart the search for a specific topic
-###Input 2:
+
+### Input 2:
 
 
-###Output 2:
+### Output 2:
 
 
 
 Default value of 10 documents so that the user can increase more later
 
-###Input 3:
+### Input 3:
 
 
 
